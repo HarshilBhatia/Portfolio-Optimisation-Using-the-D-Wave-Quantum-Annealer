@@ -53,6 +53,38 @@ def Create_Qubo(N, _lambda, P, A, returns, sigma):
     return model.to_qubo()
 
 
+def final_objective(sample, _lambda, returns, sigma,N):
+    final_sigx = 0
+
+    for i in range(N):
+        for j in range(N):
+            final_sigx += _lambda * (
+                (
+                    sample["vector[{}]".format(2 * i)]
+                    + sample["vector[{}]".format(2 * i + 1)]
+                    - 1
+                )
+                * (
+                    sample["vector[{}]".format(2 * j)]
+                    + sample["vector[{}]".format(2 * j + 1)]
+                    - 1
+                )
+                * sigma[i][j]
+            )
+
+    for i in range(N):
+        final_sigx -= (
+            (1 - _lambda)
+            * (returns[i])
+            * (
+                sample["vector[{}]".format(2 * i)]
+                + sample["vector[{}]".format(2 * i + 1)]
+                - 1
+            )
+        )
+    return final_sigx
+
+
 # bqm = AdjVectorBQM("BINARY")
 
 # for i in range(2 * N):
