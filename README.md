@@ -14,7 +14,7 @@ If you find our work useful for your research, please consider the following cit
 }
 ```
 
-## Running the Code. 
+## Running the Code
 Execute the main.py file.
 
 ## Data
