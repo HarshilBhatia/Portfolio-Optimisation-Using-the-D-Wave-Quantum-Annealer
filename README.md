@@ -1,5 +1,6 @@
 # Portfolio-Optimisation-Using-the-D-Wave-Quantum-Annealer.
-This is the official implementation of the ICCS Proceedings Portfolio Optimisation Using the D-Wave Quantum Annealer.
+This is the official implementation of the ICCS Proceedings Portfolio Optimisation Using the D-Wave Quantum Annealer. 
+
 [Paper-ICCS](https://link.springer.com/chapter/10.1007/978-3-030-77980-1_4) | 
 [Paper-arXiv](https://arxiv.org/pdf/2012.01121.pdf)
 
